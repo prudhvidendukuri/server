@@ -5,7 +5,7 @@ prduction server
 seb-domain: https://node-server.cyclic.app
 
 to get details
-use GET https://node-server.cyclic.app/api/get/<name>
+use GET https://node-server.cyclic.app/api/get/{name}
 
 to post details
 use POST
