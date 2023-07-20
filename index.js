@@ -16,7 +16,7 @@ app.use(express.json());
 
 const {connect,disconnect } = require('./DataBase/dataBase');
 connect();
-app.listen(process.env.PORT || port,hostname,()=>{
+app.listen(process.env.PORT || port,()=>{
     console.log("listening to port");
 })
 
