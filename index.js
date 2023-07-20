@@ -4,7 +4,7 @@ const express = require('express');
 require('dotenv').config();
 
 //server details
-let port = process.env.PORT || 3000;
+let port = 3000;
 let hostname = "0.0.0.0";
 
 //listening to the port
@@ -16,7 +16,7 @@ app.use(express.json());
 
 const {connect,disconnect } = require('./DataBase/dataBase');
 connect();
-app.listen(port,hostname,()=>{
+app.listen(process.env.PORT || port,hostname,()=>{
     console.log("listening to port");
 })
 
