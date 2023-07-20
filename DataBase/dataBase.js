@@ -1,7 +1,7 @@
 const mongodb = require('mongoose');
 
 //connecting the db
-const connectionString = process.env.DATABASE_URL;
+const connectionString = "mongodb+srv://username:ramaraju@cluster0.cxeofth.mongodb.net/USERS";
 mongodb.connect(connectionString);
 const db = mongodb.connection;
 
