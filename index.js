@@ -10,11 +10,16 @@ let hostname = "0.0.0.0";
 //listening to the port
 const app = express();
 app.use(express.json());
+//writing the connection in different script
+//connecting and disconnect to the db after an request is sent
+//but while deploying it says that we need to connect to mongo first before listening to the request so
+
+const {connect,disconnect } = require('./DataBase/dataBase');
+connect();
 app.listen(port,hostname,()=>{
     console.log("listening to port");
 })
-//writing the connection in different script
-//connecting and disconnect to the db after an request is sent
+
 
 //listen to routers and methods
 const routers = require('./Router/router');
