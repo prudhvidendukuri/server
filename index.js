@@ -1,5 +1,6 @@
 //dependencies
 const express = require('express');
+const cors = require('cors');
 
 require('dotenv').config();
 
@@ -10,6 +11,7 @@ let hostname = "0.0.0.0";
 //listening to the port
 const app = express();
 app.use(express.json());
+app.use(cors());
 //writing the connection in different script
 //connecting and disconnect to the db after an request is sent
 //but while deploying it says that we need to connect to mongo first before listening to the request so
